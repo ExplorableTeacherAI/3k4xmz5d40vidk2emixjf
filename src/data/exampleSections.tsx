@@ -60,6 +60,14 @@ const exampleSections: ReactElement[] = [
         </Block>
     </FullWidthLayout>,
 
+    <FullWidthLayout key="layout-paragraph-01" maxWidth="xl">
+        <Block id="block-paragraph-01" padding="sm">
+            <EditableParagraph id="para-intro-1" sectionId="block-paragraph-01">
+                This is an editable paragraph. Click on it to start editing the text. You can modify the content directly in-place. The changes are tracked and can be saved to the backend. hello
+            </EditableParagraph>
+        </Block>
+    </FullWidthLayout>,
+
     // ========================================
     // EDITABLE PARAGRAPHS DEMO
     // ========================================
@@ -71,32 +79,11 @@ const exampleSections: ReactElement[] = [
         </Block>
     </FullWidthLayout>,
 
-    <FullWidthLayout key="layout-paragraph-01" maxWidth="xl">
-        <Block id="block-paragraph-01" padding="sm">
-            <EditableParagraph id="para-intro-1" sectionId="block-paragraph-01">
-                This is an editable paragraph. Click on it to start editing the text. You can modify the content directly in-place. The changes are tracked and can be saved to the backend. hello
-            </EditableParagraph>
-        </Block>
-    </FullWidthLayout>,
-
     <FullWidthLayout key="layout-paragraph-02" maxWidth="xl">
         <Block id="block-paragraph-02" padding="sm">
             <EditableParagraph id="para-intro-2" sectionId="block-paragraph-02">
-                Here's another paragraph to demonstrate that multiple paragraphs
-                can be edited independently. Each paragraph maintains its own state
-                and editing session.
+                Here's another paragraph to demonstrate that multiple paragraphs can be edited independently. Each paragraph maintains its own state and editing session. hello 
             </EditableParagraph>
-        </Block>
-    </FullWidthLayout>,
-
-    // ========================================
-    // INLINE COMPONENTS DEMO
-    // ========================================
-    <FullWidthLayout key="layout-heading-h2-03" maxWidth="xl">
-        <Block id="block-heading-h2-03" padding="sm">
-            <EditableH2 id="h2-inline-title" sectionId="block-heading-h2-03">
-                Inline Components
-            </EditableH2>
         </Block>
     </FullWidthLayout>,
 
@@ -126,6 +113,17 @@ const exampleSections: ReactElement[] = [
         </Block>
     </FullWidthLayout>,
 
+    // ========================================
+    // INLINE COMPONENTS DEMO
+    // ========================================
+    <FullWidthLayout key="layout-heading-h2-03" maxWidth="xl">
+        <Block id="block-heading-h2-03" padding="sm">
+            <EditableH2 id="h2-inline-title" sectionId="block-heading-h2-03">
+                Inline Components
+            </EditableH2>
+        </Block>
+    </FullWidthLayout>,
+
     <FullWidthLayout key="layout-paragraph-05" maxWidth="xl">
         <Block id="block-paragraph-05" padding="sm">
             <EditableParagraph id="para-temperature-example" sectionId="block-paragraph-05">
@@ -139,22 +137,6 @@ const exampleSections: ReactElement[] = [
                     formatValue={(v) => `${v}°C`}
                 />
                 {" "}the reaction rate will change accordingly.
-            </EditableParagraph>
-        </Block>
-    </FullWidthLayout>,
-
-    <FullWidthLayout key="layout-paragraph-06" maxWidth="xl">
-        <Block id="block-paragraph-06" padding="sm">
-            <EditableParagraph id="para-count-example" sectionId="block-paragraph-06">
-                There are{" "}
-                <InlineScrubbleNumber
-                    varName="count"
-                    defaultValue={10}
-                    min={1}
-                    max={50}
-                    step={1}
-                />
-                {" "}items in the collection. Try dragging the number to adjust.
             </EditableParagraph>
         </Block>
     </FullWidthLayout>,
@@ -196,30 +178,6 @@ const exampleSections: ReactElement[] = [
         </Block>
     </FullWidthLayout>,
 
-    <FullWidthLayout key="layout-heading-h3-02" maxWidth="xl">
-        <Block id="block-heading-h3-02" padding="sm">
-            <EditableH3 id="h3-parameters-title" sectionId="block-heading-h3-02">
-                Key Parameters
-            </EditableH3>
-        </Block>
-    </FullWidthLayout>,
-
-    <FullWidthLayout key="layout-paragraph-08" maxWidth="xl">
-        <Block id="block-paragraph-08" padding="sm">
-            <EditableParagraph id="para-gravity-example" sectionId="block-paragraph-08">
-                The gravitational acceleration is{" "}
-                <InlineScrubbleNumber
-                    varName="gravity"
-                    defaultValue={9.8}
-                    min={1}
-                    max={20}
-                    step={0.1}
-                    formatValue={(v) => `${v.toFixed(1)} m/s²`}
-                />
-                . You can adjust these values to see how they affect the trajectory.
-            </EditableParagraph>
-        </Block>
-    </FullWidthLayout>,
 ];
 
 export { exampleSections };
